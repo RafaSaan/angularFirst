@@ -1,0 +1,20 @@
+<nav class="mainNavbar">
+  <ul>
+    <li
+      *ngFor="let navItem of navList"
+      class="navItem"
+      [routerLink]="navItem.route"
+      routerLinkActive="linkActive"
+      [routerLinkActiveOptions]="{exact: true}"
+      >
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        [ngStyle]="{'color': navItem.iconColor}"
+        class="itemIcon"
+        [fontIcon]="navItem.icon">
+      </mat-icon>
+      {{navItem.name}}
+    </li>
+  </ul>
+</nav>
